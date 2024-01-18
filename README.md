@@ -34,8 +34,6 @@
 #### Mediator Pattern
 
 We will use the mediator pattern to facilitate the command dispatching in our CQRS architecture.
-	• The mediator pattern is a behavioural design pattern.
-	• It promotes loose coupling by preventing objects from referring to each other explicitly.
-	• It is used to simplify communication between objects in an application by introducing a single object
-	known as the mediator that manages the distribution of messages among other objects.
-S
+- The mediator pattern is a behavioural design pattern.
+- It promotes loose coupling by preventing objects from referring to each other explicitly.
+- It is used to simplify communication between objects in an application by introducing a single object known as the mediator that manages the distribution of messages among other objects.
