@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vgvqhcIR69AoQpChepNnfo0MjIXY74hs6zCtXfqAURXuLq2Lo84ut/yAmbdCVV5paHroNFbJ1Qs8zsLYuIe9zg==",
+  "dgSpecHash": "22QEnSCNjeUSqsFx97RofqHBJXO1XqBDw7WiNput34y5LMxIGFhijVUWSWfs+hrMFanYs62DOjRE9N3UPIlIRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\melsisk\\OneDrive - DFDS\\Documents\\Udemy\\.NET Microservices & Kafka\\CQRS-ES\\CQRS.Core\\CQRS.Core.csproj",
   "expectedPackageFiles": [

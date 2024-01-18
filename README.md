@@ -32,8 +32,6 @@
 
 
 #### Mediator Pattern
+The Mediator pattern is a behavioral design pattern that is used to reduce the complexity of communication between multiple objects or classes. This pattern provides a mediator class, which normally handles all the communications between different classes and supports easy maintenance of the code by loose coupling. The Mediator pattern is particularly useful in scenarios where an application has multiple components that interact with each other in complex ways, but you want to manage these interactions in a centralized or organized manner.
 
-We will use the mediator pattern to facilitate the command dispatching in our CQRS architecture.
-- The mediator pattern is a behavioural design pattern.
-- It promotes loose coupling by preventing objects from referring to each other explicitly.
-- It is used to simplify communication between objects in an application by introducing a single object known as the mediator that manages the distribution of messages among other objects.
+In a typical scenario using these components, when a command needs to be processed, it is sent to the CommandDispatcher. The dispatcher then determines which CommandHandler is appropriate for handling the command and forwards it accordingly. This way, the CommandHandlers don't need to know about each other, reducing the dependencies between them and making the system easier to maintain and extend.

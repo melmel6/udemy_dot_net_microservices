@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pKZ9zbTmu79RvbqwRYmGHp9CZTh7IkgRQefKdCKzxgMI6uPQBQtt20ZNjJ4tkUzGsaJZAM+B+B6Y4mxbmUOOsA==",
+  "dgSpecHash": "JR7LTM300G5NiyE5WJihOeOGiEg8oukkC8gzFUf9iAWd6dCSu+tUrCD4YazfZayolj75eCaZeETgyq2qpdsPsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\melsisk\\OneDrive - DFDS\\Documents\\Udemy\\.NET Microservices & Kafka\\SM-Post\\Post.Cmd\\Post.Cmd.Infrastructure\\Post.Cmd.Infrastructure.csproj",
   "expectedPackageFiles": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qovbe7k5NG2rMyfx+s/2VA1g1lwCQB/KtlQiLZGDr7/ZgDiEfvC2dOooByz1fYINm6hPXz7M9AnZjM9AFt4AAA==",
+  "dgSpecHash": "5fgrGFhCbxc8867/7IuyTo4bzjx+1ai68BDRwQ9Q5j9scYmPm+s+A3yNHTolRuUiGHiAMjFODJ0s1vkM3ISb+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\melsisk\\OneDrive - DFDS\\Documents\\Udemy\\.NET Microservices & Kafka\\SM-Post\\Post.Query\\Post.Query.Domain\\Post.Query.Domain.csproj",
   "expectedPackageFiles": [
