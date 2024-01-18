@@ -35,3 +35,9 @@
 The Mediator pattern is a behavioral design pattern that is used to reduce the complexity of communication between multiple objects or classes. This pattern provides a mediator class, which normally handles all the communications between different classes and supports easy maintenance of the code by loose coupling. The Mediator pattern is particularly useful in scenarios where an application has multiple components that interact with each other in complex ways, but you want to manage these interactions in a centralized or organized manner.
 
 In a typical scenario using these components, when a command needs to be processed, it is sent to the CommandDispatcher. The dispatcher then determines which CommandHandler is appropriate for handling the command and forwards it accordingly. This way, the CommandHandlers don't need to know about each other, reducing the dependencies between them and making the system easier to maintain and extend.
+
+#### Aggregate Root
+AggregateRoot is an abstract class that forms the foundation of an Aggregate. In DDD, an Aggregate Root is the primary entry point to an Aggregate—a cluster of domain objects that should be treated as a single unit for the purpose of data changes.
+
+#### Aggregate
+An Aggregate is a pattern that encapsulates a group of related objects - entities and value objects - and treats them as a single unit for data modification. The root of the aggregate is the only member of the aggregate that outside objects are allowed to hold references to.
