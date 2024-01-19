@@ -41,3 +41,10 @@ AggregateRoot is an abstract class that forms the foundation of an Aggregate. In
 
 #### Aggregate
 An Aggregate is a pattern that encapsulates a group of related objects - entities and value objects - and treats them as a single unit for data modification. The root of the aggregate is the only member of the aggregate that outside objects are allowed to hold references to.
+
+#### Event Store
+An Event Store is a type of database designed specifically for storing event records in an event-sourcing system. Unlike traditional databases that store the current state of data, an event store retains a log of all changes (events) that have occurred over time. Each event represents a state change in the system. This allows you to reconstruct the state of an application by replaying these events.
+
+- Immutable Log: Events are typically stored immutably, meaning once an event is stored, it cannot be changed or deleted.
+- Sequential Order: Events are stored in the order they occurred, which is crucial for accurately reconstructing the state.
+- Query Support: Many event stores also provide mechanisms to query events and aggregate data.
