@@ -1,0 +1,18 @@
+# Ignore build folders
+bin/
+obj/
+
+# Ignore compiled binary and symbol files
+*.dll
+*.exe
+*.pdb
+
+# Ignore generated files
+*.sourcelink.json
+*.AssemblyInfo.cs
+
+# Exclude user-specific config
+appsettings.Development.json
+
+# Ignore cache files
+*.csproj.*.cache
