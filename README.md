@@ -25,6 +25,8 @@
 	- It improves write performance, since all events are simply appended to the event store. We never do any updates/deletes on the event store
 	- In case of failure, the event store can be used to restore the read database.
 
+	*It is the EventSourcingHandler, and not the EventHandler, that is responsibile for retrieving all events for a given aggregate from the Event Store and to invoke the ReplayEvents method on the AggregateRoot to recreate the latest state of the aggregate.
+
 #### Messages 
 	1. Command
 	2. Event
@@ -48,3 +50,10 @@ An Event Store is a type of database designed specifically for storing event rec
 - Immutable Log: Events are typically stored immutably, meaning once an event is stored, it cannot be changed or deleted.
 - Sequential Order: Events are stored in the order they occurred, which is crucial for accurately reconstructing the state.
 - Query Support: Many event stores also provide mechanisms to query events and aggregate data.
+
+#### Event Handling
+The EventHandler is responsible for updating the read database via the relevant repository interface once a new event is consumed from Kafka.
+Once the EventConsumer consumes an event, it will invoke the relevent handler (.On()) method which will use the event message to build or alter the PostEntity or CommentEntity, and update the related record in the read database.
+
+#### Event Consumer
+The beauty of Kafka is that the consumer offset is tracked seperately for each consumer group so that multiple consumers can consume the same event messages and use them in a different way. For example, the Post Query API consumes the PostCreatedEvent to create a new entry in the read database, but another consumer can for example use it to send an email to your social media followers that you have just created a new social media post. The latter would want to see the same event messages, and therefore need the offset to be tracked seperately for its purposes.
