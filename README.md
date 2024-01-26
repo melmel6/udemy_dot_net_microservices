@@ -57,3 +57,16 @@ Once the EventConsumer consumes an event, it will invoke the relevent handler (.
 
 #### Event Consumer
 The beauty of Kafka is that the consumer offset is tracked seperately for each consumer group so that multiple consumers can consume the same event messages and use them in a different way. For example, the Post Query API consumes the PostCreatedEvent to create a new entry in the read database, but another consumer can for example use it to send an email to your social media followers that you have just created a new social media post. The latter would want to see the same event messages, and therefore need the offset to be tracked seperately for its purposes.
+
+#### Reflection
+Manipulate objects at runtime.  This is especially useful for dynamic operations, where you need to perform actions on objects or classes that are not known at compile time.
+
+```
+	var method = this.GetType().GetMethod("Apply", new Type [] { @event.GetType() });
+```
+
+- this.GetType(): This gets the runtime type of the current instance of the class. If this code is running within an instance of PostAggregate, GetType() returns the System.Type object representing the PostAggregate class.
+
+- GetMethod("Apply", new Type [] { @event.GetType() }): This looks for a method named Apply within the PostAggregate class. The GetMethod function is part of reflection that allows you to search for methods in a class by their names.
+
+- In an event-sourced system, when an event is raised (RaiseEvent is called), the AggregateRoot class uses reflection to find and invoke the appropriate Apply method for that event type in the derived class. This allows each type of aggregate to define its own logic for handling different events, promoting flexibility and adherence to the DDD principles.
